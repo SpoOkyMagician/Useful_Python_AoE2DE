@@ -37,12 +37,6 @@ Center-Bottom-Left  59,29  71,35  83,41  99,49  109,54   119,59   239,119
 
 (The 'map square' is rotated clockwise by 45 degrees and Y is scaled by half.)
 
-     X 
- 2 +---+ 3
- Y |   | Y
- 1 +---+ 4
-     X
-
 What it actually looks like in DE...
 
         Y 
@@ -52,55 +46,34 @@ What it actually looks like in DE...
         Y
 
 1: BottomLeft (0, 0) (x1 y1)
-2: TopLeft (0, Size) (x1 y2)
-3: TopRight (Size, Size) (x2 y2)
-4: BottomRight (Size, 0) (x2 y1)
+2: TopLeft (Max_X, 0) (x1 y2)
+3: TopRight (Max_X, Max_Y) (x2 y2)
+4: BottomRight (0, Max_Y) (x2 y1)
 
 becomes... (Not exactly to scale but, you get the idea...)
 
       2
       +
-  Y /   \ X
+  X /   \ Y
 1 +       + 3
-  X \   / Y
+  Y \   / X
       +
       4
 
 It would look something like this... (Roughly. Not to scale.)
 
-           X
+           Y
 T +-----------------+ R
   |3   i   g   j   4|
   |p   6   b   7   k|
-Y |h   a   1   c   f| Y
+X |h   a   1   c   f| X
   |o   9   d   8   l|
   |2   n   e   m   5|
 L +-----------------+ B
-           X
-		   
-1: Left (0, 0) (x1 y1)
+           Y
+
+1: Center
+2: Left (0, 0) (x1 y1)
 2: Top (0, Size) (x1 y2)
 3: Right (Size, Size) (x2 y2)
 4: Bottom (Size, 0) (x2 y1)
-
-Center: 1
-
-Bottom: 5
-Top:    3
-Right:  4
-Left:   2
-
-Bottom-Left: e
-Bottom-Right: f
-Right-Top: g
-Left-Top: h
-
-Center-Left: 9
-Center-Bottom: 8
-Center-Right: 7
-Center-Top: 6
-
-Center-Bottom-Left: d
-Center-Right-Bottom: c
-Center-Top-Right: b
-Center-Left-Top: a
