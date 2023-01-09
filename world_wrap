@@ -1,6 +1,6 @@
 from AoE2ScenarioParser.scenarios.aoe2_de_scenario import AoE2DEScenario
 
-input_path = "C:\\<Users>\\NAME\\Games\\Age of Empires 2 " \
+input_path = "C:\\Users\\<NAME>\\Games\\Age of Empires 2 " \
     "DE\\<#>\\resources\\_common\\scenario\\in_file.aoe2scenario"
 output_path = "C:\\Users\\<NAME>\\Games\\Age of Empires 2 " \
     "DE\\<#>\\resources\\_common\\scenario\\out_file.aoe2scenario"
