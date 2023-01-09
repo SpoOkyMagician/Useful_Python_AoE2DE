@@ -24,7 +24,8 @@ for i in range(0, m_width):
     for j in range(0, m_height):
         trigger = trigger_manager.add_trigger(
             "LOCATION_" + str(i) + "_" + str(j), "", None, False, "", None, False, None, True, True, None, False)
-        condition = trigger.new_condition.objects_in_area(1, 814, 1, i, j, i, j, None, None, None)
+        condition_1 = trigger.new_condition.objects_in_area(1, 814, 1, i, j, i, j, None, None, None)
+        condition_2 = trigger.new_condition.timer(5, None)
         effect = trigger.new_effect.send_chat(1, None, "LOCATION X, Y: " + str(i) + ", " + str(j), None)
 
 scenario.write_to_file(output_path)
