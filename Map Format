@@ -63,6 +63,6 @@ becomes... (Not exactly to scale but, you get the idea...)
       4
 
 1: Left (0, 0) (x1 y1)
-2: Top (Max_X, 0) (x1 y2)
+2: Top (Max_X, 0) (x2 y1)
 3: Right (Max_X, Max_Y) (x2 y2)
-4: Bottom (0, Max_Y) (x2 y1)
+4: Bottom (0, Max_Y) (x1 y2)
