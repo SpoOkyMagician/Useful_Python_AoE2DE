@@ -49,6 +49,14 @@ L +-----------------+ B
 3: Top (0, Size)
 4: Right (Size, Size)
 5: Bottom (Size, 0)
+6: Middle Top
+7: Middle Right
+8: Middle Bottom
+9: Middle Left
+a: Center Middle Top Left
+b: Center Middle Top Right
+c: Center Middle Bottom Right
+d: Center Middle Bottom Left
 
 becomes... (Not exactly to scale but, you get the idea...)
 
