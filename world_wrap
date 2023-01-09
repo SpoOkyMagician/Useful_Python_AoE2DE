@@ -23,7 +23,7 @@ for j in range(1, 9):
         trigger = trigger_manager.add_trigger(
             "w2e_world_wrap_p" + str(j) + "_" + str(i), "", None, False, "", None, False, None, True, True, None, False)
         condition = trigger.new_condition.objects_in_area(1, None, j, i, 0, i, 0, None, None, None, None, None)
-        effect_1 = trigger.new_effect.teleport_object(None, j, i, 218, i, 0, i, 0, None, None, None)
+        effect_1 = trigger.new_effect.teleport_object(None, j, i, 217, i, 0, i, 0, None, None, None)
         effect_2 = trigger.new_effect.change_view(None, j, i, 218, True)
 
 # east to west
@@ -32,7 +32,7 @@ for j in range(1, 9):
         trigger = trigger_manager.add_trigger(
             "e2w_world_wrap_p" + str(j) + "_" + str(i), "", None, False, "", None, False, None, True, True, None, False)
         condition = trigger.new_condition.objects_in_area(1, None, j, i, 219, i, 219, None, None, None, None, None)
-        effect_1 = trigger.new_effect.teleport_object(None, j, i, 1, i, 219, i, 219, None, None, None)
+        effect_1 = trigger.new_effect.teleport_object(None, j, i, 2, i, 219, i, 219, None, None, None)
         effect_2 = trigger.new_effect.change_view(None, j, i, 1, True)
 
 # south to north
@@ -41,7 +41,7 @@ for j in range(1, 9):
         trigger = trigger_manager.add_trigger(
             "s2n_world_wrap_p" + str(j) + "_" + str(i), "", None, False, "", None, False, None, True, True, None, False)
         condition = trigger.new_condition.objects_in_area(1, None, j, 0, i, 0, i, None, None, None, None, None)
-        effect_1 = trigger.new_effect.teleport_object(None, j, 219, i, 0, i, 0, i, None, None, None)
+        effect_1 = trigger.new_effect.teleport_object(None, j, 217, i, 0, i, 0, i, None, None, None)
         effect_2 = trigger.new_effect.change_view(None, j, 218, i, True)
 
 # north to south
@@ -50,7 +50,7 @@ for j in range(1, 9):
         trigger = trigger_manager.add_trigger(
             "n2s_world_wrap_p" + str(j) + "_" + str(i), "", None, False, "", None, False, None, True, True, None, False)
         condition = trigger.new_condition.objects_in_area(1, None, j, 219, i, 219, i, None, None, None, None, None)
-        effect_1 = trigger.new_effect.teleport_object(None, j, 1, i, 219, i, 219, i, None, None, None)
+        effect_1 = trigger.new_effect.teleport_object(None, j, 2, i, 219, i, 219, i, None, None, None)
         effect_2 = trigger.new_effect.change_view(None, j, 1, i, True)
 
 scenario.write_to_file(output_path)
