@@ -1,0 +1,28 @@
+from AoE2ScenarioParser.scenarios.aoe2_de_scenario import AoE2DEScenario
+
+input_path = "C:\\Users\\<NAME>\\Games\\Age of Empires 2 " \
+    "DE\\<#>\\resources\\_common\\scenario\\in_file.aoe2scenario"
+output_path = "C:\\Users\\<NAME>\\Games\\Age of Empires 2 " \
+    "DE\\<#>\\resources\\_common\\scenario\\out_file.aoe2scenario"
+
+scenario = AoE2DEScenario.from_file(input_path)
+
+trigger_manager = scenario.trigger_manager
+unit_manager = scenario.unit_manager
+map_manager = scenario.map_manager
+player_manager = scenario.player_manager
+xs_manager = scenario.xs_manager
+message_manager = scenario.message_manager
+
+m_width = map_manager.map_width
+m_height = map_manager.map_height
+
+for i in range(0, m_width):
+    for j in range(0, m_height):
+        trigger = trigger_manager.add_trigger(
+            "explosion_" + str(i) + "_" + str(j), "", None, False, "", None, False, None, False, True, None, False)
+        condition = trigger.new_condition.timer(2, False)
+        effect_1 = trigger.new_effect.create_object(96, 0, i, j, None)
+        effect_2 = trigger.new_effect.kill_object(96, 0, i, j, i, j, None, None, None)
+
+scenario.write_to_file(output_path)
