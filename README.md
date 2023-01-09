@@ -1,0 +1,3 @@
+# Useful_Python_AoE2DE
+
+Just bits of code that might be useful for others...
