@@ -60,6 +60,11 @@ becomes... (Not exactly to scale but, you get the idea...)
       +
       4
 
+1: Left (0, 0) (x1 y1)
+2: Top (Max_X, 0) (x1 y2)
+3: Right (Max_X, Max_Y) (x2 y2)
+4: Bottom (0, Max_Y) (x2 y1)
+
 It would look something like this... (Roughly. Not to scale.)
 
            Y
@@ -74,6 +79,6 @@ L +-----------------+ B
 
 1: Center
 2: Left (0, 0) (x1 y1)
-2: Top (0, Size) (x1 y2)
-3: Right (Size, Size) (x2 y2)
-4: Bottom (Size, 0) (x2 y1)
+3: Top (0, Size) (x1 y2)
+4: Right (Size, Size) (x2 y2)
+5: Bottom (Size, 0) (x2 y1)
