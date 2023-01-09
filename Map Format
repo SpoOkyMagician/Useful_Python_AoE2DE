@@ -61,14 +61,14 @@ e: Bottom Left
 f: Bottom Right
 g: Top Right
 h: Top Left
-i: 
-j: 
-k: 
-l: 
-m: 
-n: 
-o: 
-p: 
+i: Top Right Middle Top
+j: Top Right Middle Right
+k: Bottom Right Middle Right
+l: Bottom Right Middle Bottom
+m: Bottom Left Middle Bottom
+n: Bottom Left Middle Left
+o: Top Left Middle Left
+p: Top Left Middle Top
 
 becomes... (Not exactly to scale but, you get the idea...)
 
