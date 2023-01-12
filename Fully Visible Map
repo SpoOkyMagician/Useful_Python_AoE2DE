@@ -17,12 +17,12 @@ message_manager = scenario.message_manager
 m_width = map_manager.map_width
 m_height = map_manager.map_height
 
+trigger = trigger_manager.add_trigger(
+    "visible_map", "", None, False, "", None, False, None, True, False, None,
+    False)
 for i in range(1, 9):
     for j in range(0, m_width):
         for k in range(0, m_height):
-            trigger = trigger_manager.add_trigger(
-                "visible_map", "", None, False, "", None, False, None, True, False, None,
-                False)
             effect_1 = trigger.new_effect.create_object(837, i, j, k, None)
 
 scenario.write_to_file(output_path)
