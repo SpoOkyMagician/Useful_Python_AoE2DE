@@ -44,6 +44,6 @@ for j in range(0, m_width):
         condition_12 = trigger.new_condition.or_()
         condition_13 = trigger.new_condition.objects_in_area(1, None, 7, j, k, j, k, None, None, None, None, None)
         condition_13_5 = trigger.new_condition.timer(60, None)
-        effect_1 = trigger.new_effect.attack_move(None, 8, j, k, None, 0, 0, m_width, m_height, None, None, None)
+        effect_1 = trigger.new_effect.attack_move(None, 8, j, k, None, 0, 0, m_width-1, m_height-1, None, None, None)
 
 scenario.write_to_file(output_path)
