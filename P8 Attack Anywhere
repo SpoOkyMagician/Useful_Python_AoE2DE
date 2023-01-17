@@ -17,7 +17,7 @@ message_manager = scenario.message_manager
 m_width = map_manager.map_width
 m_height = map_manager.map_height
 
-# This attacks any player (1-7) with an enemy (8) every 10 seconds. (Feel free to adjust timer/values as needed.)
+# This attacks any player (1-7) with an enemy (8) every 60 seconds. (Feel free to adjust timer/values as needed.)
 
 for j in range(0, m_width):
     for k in range(0, m_height):
@@ -25,25 +25,25 @@ for j in range(0, m_width):
             "attack_" + str(j) + "_" + str(k) + "", "", None, False, "", None, False, None, True,
             True, None, False)
         condition_1 = trigger.new_condition.objects_in_area(1, None, 1, j, k, j, k, None, None, None, None, None)
-        condition_1_5 = trigger.new_condition.timer(10, None)
+        condition_1_5 = trigger.new_condition.timer(60, None)
         condition_2 = trigger.new_condition.or_()
         condition_3 = trigger.new_condition.objects_in_area(1, None, 2, j, k, j, k, None, None, None, None, None)
-        condition_3_5 = trigger.new_condition.timer(10, None)
+        condition_3_5 = trigger.new_condition.timer(60, None)
         condition_4 = trigger.new_condition.or_()
         condition_5 = trigger.new_condition.objects_in_area(1, None, 3, j, k, j, k, None, None, None, None, None)
-        condition_5_5 = trigger.new_condition.timer(10, None)
+        condition_5_5 = trigger.new_condition.timer(60, None)
         condition_6 = trigger.new_condition.or_()
         condition_7 = trigger.new_condition.objects_in_area(1, None, 4, j, k, j, k, None, None, None, None, None)
-        condition_7_5 = trigger.new_condition.timer(10, None)
+        condition_7_5 = trigger.new_condition.timer(60, None)
         condition_8 = trigger.new_condition.or_()
         condition_9 = trigger.new_condition.objects_in_area(1, None, 5, j, k, j, k, None, None, None, None, None)
-        condition_9_5 = trigger.new_condition.timer(10, None)
+        condition_9_5 = trigger.new_condition.timer(60, None)
         condition_10 = trigger.new_condition.or_()
         condition_11 = trigger.new_condition.objects_in_area(1, None, 6, j, k, j, k, None, None, None, None, None)
-        condition_11_5 = trigger.new_condition.timer(10, None)
+        condition_11_5 = trigger.new_condition.timer(60, None)
         condition_12 = trigger.new_condition.or_()
         condition_13 = trigger.new_condition.objects_in_area(1, None, 7, j, k, j, k, None, None, None, None, None)
-        condition_13_5 = trigger.new_condition.timer(10, None)
+        condition_13_5 = trigger.new_condition.timer(60, None)
         effect_1 = trigger.new_effect.attack_move(None, 8, j, k, None, 0, 0, m_width, m_height, None, None, None)
 
 scenario.write_to_file(output_path)
