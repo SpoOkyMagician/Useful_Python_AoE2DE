@@ -17,6 +17,8 @@ message_manager = scenario.message_manager
 m_width = map_manager.map_width
 m_height = map_manager.map_height
 
+# This attacks any player (1-7) with an enemy (8) every 10 seconds. (Feel free to adjust timer/values as needed.)
+
 for j in range(0, m_width):
     for k in range(0, m_height):
         trigger = trigger_manager.add_trigger(
