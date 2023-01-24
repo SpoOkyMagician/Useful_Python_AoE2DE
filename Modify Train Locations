@@ -1,0 +1,133 @@
+from AoE2ScenarioParser.scenarios.aoe2_de_scenario import AoE2DEScenario
+
+input_path = "C:\\Users\\<NAME>\\Games\\Age of Empires 2 " \
+    "DE\\<#>\\resources\\_common\\scenario\\in_file.aoe2scenario"
+output_path = "C:\\Users\\<NAME>\\Games\\Age of Empires 2 " \
+    "DE\\<#>\\resources\\_common\\scenario\\out_file.aoe2scenario"
+
+scenario = AoE2DEScenario.from_file(input_path)
+
+trigger_manager = scenario.trigger_manager
+unit_manager = scenario.unit_manager
+map_manager = scenario.map_manager
+player_manager = scenario.player_manager
+xs_manager = scenario.xs_manager
+message_manager = scenario.message_manager
+
+# m_width = map_manager.map_width
+# m_height = map_manager.map_height
+
+player = 1
+conditions = []
+effects = []
+
+for player in range(1, 9):
+    trigger = trigger_manager.add_trigger(
+        "mod_buttons_" + str(player), "", None, False, "", None, False, None, True, False, False, False)
+
+    # militia line
+    effects.append(trigger.new_effect.change_train_location(74, player, 79, 1))
+    effects.append(trigger.new_effect.change_train_location(75, player, 79, 1))
+    effects.append(trigger.new_effect.change_train_location(77, player, 79, 1))
+    effects.append(trigger.new_effect.change_train_location(473, player, 79, 1))
+    effects.append(trigger.new_effect.change_train_location(567, player, 79, 1))
+
+    # spearman line
+    effects.append(trigger.new_effect.change_train_location(93, player, 79, 2))
+    effects.append(trigger.new_effect.change_train_location(358, player, 79, 2))
+    effects.append(trigger.new_effect.change_train_location(359, player, 79, 2))
+
+    # eagle warrior line
+    effects.append(trigger.new_effect.change_train_location(751, player, 79, 3))
+    effects.append(trigger.new_effect.change_train_location(753, player, 79, 3))
+    effects.append(trigger.new_effect.change_train_location(752, player, 79, 3))
+
+    # archer line
+    effects.append(trigger.new_effect.change_train_location(4, player, 79, 4))
+    effects.append(trigger.new_effect.change_train_location(24, player, 79, 4))
+    effects.append(trigger.new_effect.change_train_location(492, player, 79, 4))
+
+    # skirmisher line
+    effects.append(trigger.new_effect.change_train_location(7, player, 79, 6))
+    effects.append(trigger.new_effect.change_train_location(6, player, 79, 6))
+    effects.append(trigger.new_effect.change_train_location(1155, player, 79, 6))
+
+    # cavalry archer line
+    effects.append(trigger.new_effect.change_train_location(39, player, 79, 7))
+    effects.append(trigger.new_effect.change_train_location(474, player, 79, 7))
+
+    # elephant archers
+    effects.append(trigger.new_effect.change_train_location(873, player, 79, 8))
+    effects.append(trigger.new_effect.change_train_location(875, player, 79, 8))
+
+    # hand cannnoneer
+    effects.append(trigger.new_effect.change_train_location(5, player, 79, 9))
+
+    # scout cavalry line
+    effects.append(trigger.new_effect.change_train_location(448, player, 79, 11))
+    effects.append(trigger.new_effect.change_train_location(546, player, 79, 11))
+    effects.append(trigger.new_effect.change_train_location(441, player, 79, 11))
+    effects.append(trigger.new_effect.change_train_location(1707, player, 79, 11))
+
+    # knight line
+    effects.append(trigger.new_effect.change_train_location(38, player, 79, 12))
+    effects.append(trigger.new_effect.change_train_location(283, player, 79, 12))
+    effects.append(trigger.new_effect.change_train_location(569, player, 79, 12))
+
+    # camel line
+    effects.append(trigger.new_effect.change_train_location(1755, player, 79, 13))
+    effects.append(trigger.new_effect.change_train_location(329, player, 79, 13))
+    effects.append(trigger.new_effect.change_train_location(330, player, 79, 13))
+    effects.append(trigger.new_effect.change_train_location(207, player, 79, 13))
+
+    # battle elephant line
+    effects.append(trigger.new_effect.change_train_location(1132, player, 79, 14))
+    effects.append(trigger.new_effect.change_train_location(1134, player, 79, 14))
+
+    # steppe lancer line
+    effects.append(trigger.new_effect.change_train_location(1370, player, 79, 21))
+    effects.append(trigger.new_effect.change_train_location(1372, player, 79, 21))
+
+    # genitour line
+    effects.append(trigger.new_effect.change_train_location(1010, player, 79, 22))
+    effects.append(trigger.new_effect.change_train_location(1012, player, 79, 22))
+
+    # shrivamsha rider
+    effects.append(trigger.new_effect.change_train_location(1751, player, 79, 23))
+    effects.append(trigger.new_effect.change_train_location(1753, player, 79, 23))
+
+    # slinger
+    effects.append(trigger.new_effect.change_train_location(185, player, 79, 24))
+
+    # condottiero
+    effects.append(trigger.new_effect.change_train_location(882, player, 79, 26))
+
+    # battering ram line
+    effects.append(trigger.new_effect.change_train_location(1258, player, 79, 27))
+    effects.append(trigger.new_effect.change_train_location(422, player, 79, 27))
+    effects.append(trigger.new_effect.change_train_location(548, player, 79, 27))
+
+    # armored elephant line
+    effects.append(trigger.new_effect.change_train_location(1744, player, 79, 28))
+    effects.append(trigger.new_effect.change_train_location(1746, player, 79, 28))
+
+    # mangonel line
+    effects.append(trigger.new_effect.change_train_location(280, player, 79, 29))
+    effects.append(trigger.new_effect.change_train_location(550, player, 79, 29))
+    effects.append(trigger.new_effect.change_train_location(588, player, 79, 29))
+
+    # scorpion line
+    effects.append(trigger.new_effect.change_train_location(279, player, 79, 31))
+    effects.append(trigger.new_effect.change_train_location(542, player, 79, 31))
+
+    # bombard cannon
+    effects.append(trigger.new_effect.change_train_location(36, player, 79, 32))
+    effects.append(trigger.new_effect.change_train_location(1709, player, 79, 32))
+
+    # monk
+    effects.append(trigger.new_effect.change_train_location(125, player, 79, 33))
+
+    # missionary
+    effects.append(trigger.new_effect.change_train_location(775, player, 79, 34))
+
+scenario.write_to_file(output_path)
