@@ -1,0 +1,6 @@
+You will need to copy 'Flag C', make a new object, paste it twice for ID's 1829 and 1830. (or manually add it yourself.)
+The graphics ID's are 12633 and 12634.
+25 Frames.
+1 Frame Per Angle. Sequence Type 2.
+
+This will create these custom objects to show the x/y values in game. Depending on the map size, it may take really long to generate the scenario...
