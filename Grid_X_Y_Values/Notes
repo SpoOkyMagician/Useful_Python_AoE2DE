@@ -4,3 +4,5 @@ The graphics ID's are 12633 and 12634.
 1 Frame Per Angle. Sequence Type 2.
 
 This will create these custom objects to show the x/y values in game. Depending on the map size, it may take really long to generate the scenario...
+
+Lurikris works but, I can't get it to run sadly. It generates a trigger with 1,276,799 effects and it's 6.37 MB in size.
